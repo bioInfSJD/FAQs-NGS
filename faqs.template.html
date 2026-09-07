@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ============================================================
-     TÍTOL DE LA PÀGINA (apareix a la pestanya del navegador)
-     ============================================================ -->
+<!-- Page title (shown in the browser tab) -->
 <title>Estudis germinals NGS</title>
 <style>
 :root{--ink:#15211d;--muted:#5d6b64;--accent:#0f766e;--accent-d:#0c5f58;--border:#e3ebe8;
@@ -18,12 +16,12 @@ h1{font-size:26px;letter-spacing:-.01em;margin:0 0 6px}
 .sub{color:var(--muted);margin:0 0 30px}
 a{color:var(--accent)}
 
-/* ---- Seccions (títols comuns) ---- */
+/* Sections (shared headings) */
 .sec{margin:0 0 34px}
 .sec-h{font-size:19px;margin:0 0 4px}
 .sec-lead{color:var(--muted);margin:0 0 16px;font-size:15px}
 
-/* ---- Conceptes (amb dibuix) ---- */
+/* Concept cards (with illustration) */
 .concepts{display:grid;gap:14px}
 .concept{background:#fff;border:1px solid var(--border);border-radius:14px;
   box-shadow:0 8px 24px rgba(20,40,34,.06);padding:18px 20px;
@@ -35,7 +33,7 @@ a{color:var(--accent)}
   font-family:Georgia,"Times New Roman",serif}
 @media(max-width:520px){.concept{flex-direction:column;text-align:center;gap:12px}}
 
-/* ---- Tipus de troballes ---- */
+/* Finding types */
 .findings{display:grid;gap:12px}
 .finding{background:#fff;border:1px solid var(--border);border-left-width:4px;border-radius:12px;
   box-shadow:0 6px 18px rgba(20,40,34,.05);padding:15px 18px;display:flex;gap:14px;align-items:flex-start}
@@ -49,7 +47,7 @@ a{color:var(--accent)}
 .f-nc{border-left-color:var(--no)}   .f-nc .finding-ico{background:var(--no)}
 .f-al{border-left-color:var(--accent)} .f-al .finding-ico{background:var(--accent)}
 
-/* ---- Llistats de gens ---- */
+/* Gene lists */
 .genes{background:#fff;border:1px solid var(--border);border-radius:14px;
   box-shadow:0 8px 24px rgba(20,40,34,.06);padding:22px 22px 20px}
 .btn-link{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#fff;
@@ -59,7 +57,7 @@ a{color:var(--accent)}
 .genes-note{margin:16px 0 0;font-size:13.5px;color:var(--muted);line-height:1.65}
 .genes-note strong{color:var(--ink)}
 
-/* ---- Preguntes (FAQ) ---- */
+/* FAQ (accordion) */
 .card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;
   box-shadow:0 8px 24px rgba(20,40,34,.06)}
 .acc{border-bottom:1px solid var(--border)}
@@ -75,7 +73,7 @@ a{color:var(--accent)}
   font-family:Georgia,"Times New Roman",serif;line-height:1.7;white-space:pre-wrap}
 .acc-a .inner a{font-weight:600}
 
-/* ---- Navegador de panells de gens ---- */
+/* Gene-panel browser */
 .panel-search{width:100%;padding:11px 14px;font:inherit;font-size:15px;border:1px solid var(--line);
   border-radius:10px;margin:0 0 16px;color:var(--ink);background:#fff}
 .panel-search:focus{outline:none;border-color:var(--accent)}
@@ -101,7 +99,7 @@ a{color:var(--accent)}
 .legend{margin:14px 0 0;font-size:12.5px;color:var(--muted);line-height:1.6}
 .legend b{color:var(--ink);font-weight:600}
 
-/* ---- Modal taula de gens ---- */
+/* Gene-table modal */
 .gene-modal{position:fixed;inset:0;background:rgba(20,33,29,.5);display:flex;
   align-items:center;justify-content:center;padding:16px;z-index:50}
 .gene-modal[hidden]{display:none}
@@ -129,22 +127,18 @@ a{color:var(--accent)}
 </head>
 <body>
 <div class="wrap">
-  <!-- ============================================================
-       CAPÇALERA: canvia el títol i el subtítol pels teus
-       ============================================================ -->
+  <!-- Header: edit the title and subtitle here -->
   <h1>Estudis germinals NGS</h1>
   <p class="sub">Guia ràpida i preguntes freqüents</p>
 
-  <!-- ============================================================
-       SECCIÓ 1: conceptes clau
-       ============================================================ -->
+  <!-- Section 1: key concepts -->
   <section class="sec">
     <h2 class="sec-h">Conceptes bàsics</h2>
     <p class="sec-lead">Tres idees per entendre el teu estudi genètic.</p>
 
     <div class="concepts">
 
-      <!-- 1. EXOMA COMPLET (WES) -->
+      <!-- 1. Whole exome sequencing (WES) -->
       <article class="concept">
         <div class="concept-ill">
           <svg viewBox="0 0 96 72" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Exoma complet (WES)">
@@ -162,7 +156,7 @@ a{color:var(--accent)}
         </div>
       </article>
 
-      <!-- 2. REANÀLISI -->
+      <!-- 2. Re-analysis -->
       <article class="concept">
         <div class="concept-ill">
           <svg viewBox="0 0 96 72" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Reanàlisi">
@@ -184,7 +178,7 @@ a{color:var(--accent)}
         </div>
       </article>
 
-      <!-- 3. RE-AVALUACIÓ DE VARIANTS -->
+      <!-- 3. Variant re-evaluation -->
       <article class="concept">
         <div class="concept-ill">
           <svg viewBox="0 0 96 72" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Re-avaluació de variants">
@@ -208,9 +202,7 @@ a{color:var(--accent)}
     </div>
   </section>
 
-  <!-- ============================================================
-       SECCIÓ 2: tipus de troballes
-       ============================================================ -->
+  <!-- Section 2: finding types -->
   <section class="sec">
     <h2 class="sec-h">Tipus de troballes</h2>
     <p class="sec-lead">Què pot indicar el teu informe.</p>
@@ -252,15 +244,12 @@ a{color:var(--accent)}
     </div>
   </section>
 
-  <!-- ============================================================
-       SECCIÓ 3: llistats de gens
-       ⬇⬇⬇  ENGANXA AQUÍ L'URL DELS LLISTATS a href="..."  ⬇⬇⬇
-       ============================================================ -->
+  <!-- Section 3: gene lists / panel browser -->
   <section class="sec">
     <h2 class="sec-h">Llistats de gens</h2>
     <p class="sec-lead">Explora els panells de gens organitzats per grup de malalties. Clica un grup per desplegar-lo i, després, un panell per veure'n la taula de gens.</p>
     <div class="genes">
-      <!-- Cercador i navegador (s'omplen automàticament amb panells-data.js) -->
+      <!-- Search box and browser container (populated by the script below) -->
       <input id="panelSearch" class="panel-search" type="search" placeholder="Cerca un panell, un grup o un gen&hellip;" autocomplete="off">
       <div id="panelGroups" class="panel-groups"></div>
 
@@ -269,9 +258,7 @@ a{color:var(--accent)}
     </div>
   </section>
 
-  <!-- ============================================================
-       MODAL: taula de gens d'un panell (s'obre en clicar un panell)
-       ============================================================ -->
+  <!-- Modal: gene table for one panel (opens when a panel is clicked) -->
   <div id="geneModal" class="gene-modal" hidden>
     <div class="gene-modal-box" role="dialog" aria-modal="true" aria-labelledby="gmTitle">
       <div class="gene-modal-head">
@@ -291,25 +278,20 @@ a{color:var(--accent)}
     </div>
   </div>
 
-  <!-- ============================================================
-       SECCIÓ 4: preguntes freqüents
-       CADA PREGUNTA ÉS UN BLOC "acc" COM AQUEST.
-       - Escriu la pregunta dins del <span>...</span>
-       - Escriu la resposta dins del <div class="inner">...</div>
-       Per AFEGIR-NE una: copia un bloc sencer i enganxa'l a sota.
-       Per TREURE'N una: esborra el bloc sencer.
-       ============================================================ -->
+  <!-- Section 4: FAQ
+       Each question is an ".acc" block like the one below.
+       - Write the question inside <span>...</span>
+       - Write the answer inside <div class="inner">...</div>
+       To add one: copy a whole block and paste it underneath.
+       To remove one: delete the whole block. -->
   <section class="sec">
     <h2 class="sec-h">Preguntes freqüents</h2>
     <div class="card">
-      <!-- ============================================================
-           INSERIR AQUÍ LES PREGUNTES.
-           Model d'una pregunta (copia'l per cada nova):
+      <!-- Question template (copy for each new one):
            <div class="acc">
-             <button class="acc-q"><span>PREGUNTA?</span><span class="chev">&rsaquo;</span></button>
-             <div class="acc-a"><div class="inner">RESPOSTA.</div></div>
-           </div>
-           ============================================================ -->
+             <button class="acc-q"><span>QUESTION?</span><span class="chev">&rsaquo;</span></button>
+             <div class="acc-a"><div class="inner">ANSWER.</div></div>
+           </div> -->
       <div class="acc">
         <button class="acc-q"><span>Insereix aquí les preguntes</span><span class="chev">&rsaquo;</span></button>
         <div class="acc-a"><div class="inner">Pendent d'afegir. Aquí aniran les preguntes i respostes.</div></div>
@@ -318,7 +300,8 @@ a{color:var(--accent)}
   </section>
 
 </div>
-<!-- No cal tocar res d'aquí baix: és el que obre i tanca cada pregunta -->
+
+<!-- Open/close each FAQ question -->
 <script>
 document.querySelectorAll('.acc-q').forEach(function(b){
   b.addEventListener('click',function(){
@@ -328,26 +311,24 @@ document.querySelectorAll('.acc-q').forEach(function(b){
 });
 </script>
 
-<!-- ============================================================
-     DADES DELS PANELLS: generades automàticament des del ZIP.
-     Per actualitzar-les, torna a generar el fitxer panells-data.js.
-     ============================================================ -->
+<!-- Panel data: injected automatically from Panells.zip by generar_panells.py.
+     Do not edit the placeholder below by hand. -->
 <script>
-/* Dades generades automàticament des de Panells.zip */
 /*__PANELLS_DATA__*/
 </script>
 
-<!-- No cal tocar res d'aquí baix: construeix el navegador de panells -->
+<!-- Build the panel browser (groups, search and gene-table modal) -->
 <script>
 (function(){
   var data = window.PANELLS;
   var cont = document.getElementById('panelGroups');
   if(!data || !cont){ if(cont) cont.innerHTML='<p class="gene-empty">No s\'han pogut carregar els panells.</p>'; return; }
 
+  // Escape a value before inserting it as HTML
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){
     return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
-  // ---- Construeix l'acordió de grups i panells ----
+  // Build the accordion: one collapsible group per disease area
   data.groups.forEach(function(g){
     var pg=document.createElement('div'); pg.className='pg';
     var real=g.panels.filter(function(p){return !p.alias;}).length;
@@ -363,7 +344,7 @@ document.querySelectorAll('.acc-q').forEach(function(b){
       }
       var it=document.createElement('button'); it.className='panel-item'; it.type='button';
       it.dataset.name=(p.name||'').toLowerCase();
-      it._panel=p;   // referència per a la cerca per gen
+      it._panel=p;   // reference used by the gene search
       it.innerHTML='<span class="p-name">'+esc(p.name)+(p.version?'<span class="p-ver">'+esc(p.version)+'</span>':'')+'</span><span class="p-count">'+p.n+' gens</span>';
       it.addEventListener('click',function(){ openPanel(g,p); });
       body.appendChild(it);
@@ -374,24 +355,23 @@ document.querySelectorAll('.acc-q').forEach(function(b){
     cont.appendChild(pg);
   });
 
-  // ---- Cercador de panells / grups / gens ----
+  // Search by group, panel or gene name
   var search=document.getElementById('panelSearch');
-  function geneMatch(el,q){                       // el panell conté un gen que coincideix?
+  function geneMatch(el,q){   // does this panel contain a gene matching q?
     var p=el._panel; if(!p||!p.genes) return false;
     for(var i=0;i<p.genes.length;i++){ if(p.genes[i][0].toLowerCase().indexOf(q)>=0) return true; }
     return false;
   }
   search.addEventListener('input',function(){
     var q=search.value.trim().toLowerCase();
-    var byGene=q.length>=2;                        // la cerca per gen només amb 2+ caràcters
+    var byGene=q.length>=2;   // only match gene names for queries of 2+ characters
     document.querySelectorAll('.pg').forEach(function(pg){
       if(!q){ pg.style.display=''; pg.classList.remove('open');
         pg.querySelectorAll('.panel-item,.panel-alias').forEach(function(x){x.style.display='';}); return; }
       var groupMatch=pg.dataset.gname.indexOf(q)>=0;
       var any=false;
       pg.querySelectorAll('.panel-item,.panel-alias').forEach(function(x){
-        var show=groupMatch || x.dataset.name.indexOf(q)>=0
-                 || (byGene && x.classList.contains('panel-item') && geneMatch(x,q));
+        var show=groupMatch || x.dataset.name.indexOf(q)>=0 || (byGene && geneMatch(x,q));
         x.style.display=show?'':'none'; if(show) any=true;
       });
       pg.style.display=any?'':'none';
@@ -399,7 +379,7 @@ document.querySelectorAll('.acc-q').forEach(function(b){
     });
   });
 
-  // ---- Modal amb la taula de gens ----
+  // Gene-table modal
   var modal=document.getElementById('geneModal');
   var body=document.getElementById('gmBody');
   var title=document.getElementById('gmTitle');
@@ -419,12 +399,12 @@ document.querySelectorAll('.acc-q').forEach(function(b){
   }
   function closePanel(){ modal.hidden=true; document.body.style.overflow=''; }
 
+  // Filter the visible rows of the open panel by gene name
   filter.addEventListener('input',function(){
     var q=filter.value.trim().toLowerCase();
-    var shown=0;
     body.querySelectorAll('tr').forEach(function(tr){
       var g=(tr.cells[0]?tr.cells[0].textContent:'').toLowerCase();
-      var show=!q || g.indexOf(q)>=0; tr.style.display=show?'':'none'; if(show) shown++;
+      tr.style.display=(!q || g.indexOf(q)>=0)?'':'none';
     });
   });
 
